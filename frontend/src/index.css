@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900;
+  }
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Markdown styling inside chat messages */
+.prose-medical {
+  color: #1e293b;
+  line-height: 1.65;
+}
+
+.prose-medical p {
+  margin-bottom: 0.85em;
+}
+
+.prose-medical p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-medical strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.prose-medical ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.85em;
+}
+
+.prose-medical ol {
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+  margin-bottom: 0.85em;
+}
+
+.prose-medical li {
+  margin-bottom: 0.35em;
+}
+
+.prose-medical h1, .prose-medical h2, .prose-medical h3 {
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.prose-medical blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 0.85rem;
+  font-style: italic;
+  color: #475569;
+  margin: 0.75rem 0;
+}
+
+.prose-medical code {
+  background-color: #f1f5f9;
+  color: #0369a1;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Subtle glow animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
